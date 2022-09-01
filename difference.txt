@@ -1,0 +1,47 @@
+size_t length = 10;
+	/*~0*/
+	for (size_t q = 1, i = 1;
+		i < length;
+		q <<= i, i++) {
+		printf("%o OCT\n", q);
+		printf("%x HEX\n", q);
+		printf("%d DEC SIGN\n", q);
+		printf("%u DEC UNSIGN\n\n", q);
+		q = 1;
+	}/*C_lang_157*/
+
+/*******************************************************************/
+#ifdef __cplusplus
+extern "C" { 
+#else { 
+#endif
+
+/*CODE*/
+
+}
+
+
+		if (count =
+#define OPTION 3
+#if OPTION == 1
+			fscanf(fp, "%15c", &buff[0])
+			/*fgets(buff, _ARRAYSIZE(buff), fp) != NULL/*full the buffer to '\0', '\n' or buffer size (second argument)*/
+#elif OPTION == 2
+			fscanf(fp, "%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c"
+				, &buffc[0], &buffc[1], &buffc[2], &buffc[3], &buffc[4], &buffc[5], &buffc[6], &buffc[7]
+				, &buffc[8], &buffc[9], &buffc[10], &buffc[11], &buffc[12], &buffc[13], &buffc[14], &buffc[15])
+#elif OPTION == 3
+			strhex(fp, buffhex,ARRAYSIZE(buffhex))
+#endif/**/
+			== BUFFERSIZE ) {}
+
+#if OPTION == 1
+#elif OPTION == 2
+#elif OPTION == 3
+#endif/**/
+
+
+	/*while (1) {
+	char c = fgetc(fp);
+	if(feof(fp)) break;
+	}/**/
