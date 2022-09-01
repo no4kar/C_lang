@@ -6,7 +6,8 @@
 #include<stdint.h>/*int8_t,...*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<Windows.h>/*Sleep(millisec)*/
+#include<assert.h>
+#include<Windows.h>/*Sleep(millisec), ARRAYSIZE,*/
 
 #define DEF_PROJ(funcEntrName) int funcEntrName(const int argc, const char* argv[], const char* env[])
 #define DEF_EXTERN_PROJ(funcEntrName)	extern DEF_PROJ(funcEntrName)

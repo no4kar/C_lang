@@ -1,9 +1,8 @@
 #pragma once
-#include<stdlib.h>
-#include<stdio.h>
+#include"CmnInc.h"
 
 /*FIFO LinkedList*/
-#define ARRAY_SIZE(arr_name)	(sizeof(arr_name)/sizeof((arr_name)[0]))
+/*in #include<Windows.h> ARRAYSIZE(arr_name)*/
 #define NEW(type_name)			(##type_name##*)malloc(sizeof(##type_name))
 #define DELETE(ptr)				free((void*)(ptr))
 #define TEMPLATE(TEMP_NAME,TEMP_VARs) \

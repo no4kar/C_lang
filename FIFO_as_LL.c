@@ -116,24 +116,17 @@ STATIC struct NODE**
 		, struct NODE_IMPL* impl
 ) {
 	
-	if (!impl)
-		fprintf(
-			stderr
-			, "%s\n%s in line: %d\n"
-			, "'malloc' return NULL"
-			, __FILE__
-			, __LINE__)
-		, abort();
+	if (impl == NULL)assert(0), abort();
 	
 	/*static variables are init one time only, in compile time*/
 	struct NODE* newNode = NEW(struct Node);
-	if (!newNode)
+	if (newNode == NULL)
 		fprintf(
 			stderr
 			, "%s\n%s in line: %d\n"
 			, "'malloc' return NULL"
 			, __FILE__
-			, __LINE__)
+			, __LINE__)/*does almost same as "assert"*/
 		, abort();
 
 	newNode->m_next = *totail_ptr;
