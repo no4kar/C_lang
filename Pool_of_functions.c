@@ -352,3 +352,28 @@ ArithmProgres(
 ) {/*SUMn=((A1+An)/2)*n*/
 	return (a1 > an) ? ArithmProgres(an, a1) : ((a1 + an) * (an - a1 + 1)) / 2;
 }
+
+void
+HailstormeSequence(
+	int n
+	, FILE* const stream
+) {
+	while (n ^ 1/*n != 1*/) {
+#if 1
+		if (n & 1/*n is odd*/) {
+			n *= 3;
+			n++;
+		}
+		else /*n is even*/ {
+			n /= 2;
+		}
+#else
+		n = (n & 1) ? ((n * 3) + 1) : (n / 2);
+#endif/*more simple notation*/
+		fprintf(stream, "%d, ", n);
+	}
+
+	fprintf(stream, "%d.\n", n);
+	
+	return;
+}
