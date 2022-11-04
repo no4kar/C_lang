@@ -289,7 +289,7 @@ SetBits_2_6(
 	int shift = index + 1 - quantity;
 	
 	source &= cut;/*OCT "0...", HEX "0x..." or "...h"*/
-	source <<= shift;/*in C++ "<<=" that in C "<<"*/
+	source <<= shift;
 	cut <<= shift;
 
 	return (destination & ~cut) | source;
@@ -356,7 +356,7 @@ ArithmProgres(
 void
 HailstormeSequence(
 	int n
-	, FILE* const stream
+	, const FILE* stream
 ) {
 	while (n ^ 1/*n != 1*/) {
 #if 1
@@ -373,7 +373,23 @@ HailstormeSequence(
 		fprintf(stream, "%d, ", n);
 	}
 
-	fprintf(stream, "%d.\n", n);
+	fprintf(stream, "%s", ".\n");
 	
 	return;
+}
+
+int
+Neg(
+	int n
+) {
+	n ^= (int)(~0);/* "++(n^(~0))" this notation doesn't because "n^(~0)" is returning a rvalue*/
+	return ++n;
+}
+
+int
+Sub(
+	int x
+	, int y
+) {
+	return x + Neg(y);
 }

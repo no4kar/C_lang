@@ -76,6 +76,19 @@ ArithmProgres(
 	, int an
 );
 
+void
+HailstormeSequence(int n, const struct _iobuf* stream);
+
+int
+Neg(
+	int n
+);/*as CPU does*/
+
+int
+Sub(
+	int x
+	, int y
+);/*as CPU does*/
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -92,7 +105,7 @@ C_lang_177(
 );
 
 int
-clang202(
+C_lang_202(
 	int argc,
 	char* argv[]
 );

@@ -37,6 +37,12 @@ main(const int argc
 	printf("%s", ptr2str(p2a_1));
 #endif
 
+#if 0
+	HailstormeSequence(10, stdout);
+	int a = 5;
+	a = Neg(a);
+	a = Sub(a, a);
+#endif/*-5-(-5) return 0*/
 	
 #if 1
 
